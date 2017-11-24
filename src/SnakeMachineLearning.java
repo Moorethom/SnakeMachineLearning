@@ -1,16 +1,15 @@
-import java.awt.Robot;
-
 public class SnakeMachineLearning {
 
 	static displayInput snakeGame;
 	
-	public static void main(String[] args) {
-		tester();
+	public static void main(String[] args) throws Exception {
+		//while(displayInput.test() == true){
+			snakeDisplay();
+		//}
 	}
 	
-	static void tester() {
-		displayInput.test();
-		
+	static void snakeDisplay() throws Exception{
+		displayInput.screenCapture();	
 	}
 
 }
