@@ -1,13 +1,11 @@
 import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.List;
 import java.awt.Rectangle;
 import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.image.BufferedImage;
 
 import java.io.File;
-import java.util.ArrayList;
 
 import javax.imageio.ImageIO;
 
@@ -47,9 +45,10 @@ public class displayInput {
 		
 		img = robot.createScreenCapture(new Rectangle(xPos, yPos, width, height)); //saves the image here
 	
-		for(int i=0;i<=15;i++){
-			for(int j = 0; j<=17; j++){
-				col = robot.getPixelColor(i*40+20,j*40+20);
+		for(int i=0;i<17;i++){
+			for(int j = 0; j<15; j++){
+				col = new Color(img.getRGB(i*40+20,j*40+20));
+				System.out.println(j + " i" + i);
 				if(b>=140){
 					
 				} else if(r>=140){
