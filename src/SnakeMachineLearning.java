@@ -1,22 +1,22 @@
-import java.awt.Robot;
 
 public class SnakeMachineLearning {
-	
-	static Robot robot;
 
 	static displayInput snakeGame;
+	static Keyboard moveSnake;
+	
 	
 	public static void main(String[] args) throws Exception { //this is the main function that runs the whole program
 		
+		Thread.sleep(3000);
+		//snakeMove();
+		
 		while(displayInput.test() == true){ //adds an infinite loop
-			//robot.delay(50);
 			displayInput.screenCapture();  //returns a picture of the screen
-			snakeDisplay(); //turns the image into a readable image for the code
+			
 		}
 	}
 	
-	static void snakeDisplay() { //
-			
+	static void snakeMove() throws Exception { 
+		moveSnake.pressDown();
 	}
-
 }

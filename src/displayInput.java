@@ -10,7 +10,6 @@ import java.io.File;
 
 import javax.imageio.ImageIO;
 
-
 public class displayInput {
 	
 	//Screen Dimensions here:
@@ -26,7 +25,7 @@ public class displayInput {
 	//fields
 	static Dimension screenDim;
 	static BufferedImage img;
-	static BufferedImage tempImg;
+	public static BufferedImage tempImg;
 	
 	static Robot robot;
 	static Graphics2D g2d;
@@ -66,7 +65,7 @@ public class displayInput {
 					g2d.fillRect(i*40, j*40, rectW, rectH); //draws a red square for fitness block
 				}
 			}
-		}
+		}	
 		
 		//This line of code may be useless but was here for debugging purposes
 		ImageIO.write(tempImg, "jpeg",
