@@ -5,6 +5,7 @@ public class SnakeMachineLearning {
 
 	static displayInput snakeGame;
 	static Robot input;
+	static NeuralNetwork network;
 	
 	
 	public static void main(String[] args) throws Exception { //this is the main function that runs the whole program
@@ -13,11 +14,12 @@ public class SnakeMachineLearning {
 		
 		Thread.sleep(4000); //4 Second wait time
 		
-		pressRight(); //initial start
+		//pressRight(); //initial start
 		
 		
 		while(displayInput.test() == true){ //adds an infinite loop
-			displayInput.screenCapture();  //returns a picture of the screen
+			//displayInput.screenCapture();  //returns a picture of the screen
+			
 			
 		}
 	}
