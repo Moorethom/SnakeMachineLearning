@@ -1,9 +1,16 @@
 
 public class NeuralNetwork {
+
 	
 		public NeuralNetwork(){
-			
-			Neuron xor = new Neuron(0.5f);
+		
+		}
+		
+		public void networking(int[] data){				
+	        
+	        System.out.println("true");
+	        
+	        Neuron xor = new Neuron(0.5f);
 	        Neuron left = new Neuron(1.5f);
 	        Neuron right = new Neuron(0.5f);
 	        
@@ -11,9 +18,11 @@ public class NeuralNetwork {
 	        right.setWeight(1.0f);
 	        xor.connect(left, right);
 
-	        for (String val : args) {
+	        for (int val : data) {
 	            Neuron op = new Neuron(0.0f);
-	            op.setWeight(Boolean.parseBoolean(val));
+	            
+	            op.setWeight(val);
+	            
 	            left.connect(op);
 	            right.connect(op);
 	        }

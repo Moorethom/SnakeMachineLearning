@@ -1,18 +1,20 @@
 import java.util.ArrayList;
 
 public class Neuron {
-	private ArrayList inputs;
+	
+	private ArrayList<Neuron> inputs;
+	
     private float weight;
     private float threshhold;
     private boolean fired;
-
-    public Neuron (float t) {
+    
+	public Neuron (float t) {
         threshhold = t;
         fired = false;
-        inputs = new ArrayList();
+        inputs = new ArrayList<Neuron>();
     }
 
-    public void connect (Neuron ... ns) {
+	public void connect (Neuron ... ns) {
         for (Neuron n : ns) inputs.add(n);
     }
 
@@ -51,4 +53,4 @@ public class Neuron {
         return fired;
     }
 }
-}
+

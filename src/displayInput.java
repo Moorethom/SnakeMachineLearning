@@ -16,10 +16,10 @@ public class displayInput {
 	static int xPos = 610; //The starting x and y co-ords for the game
 	static int yPos = 318;
 	
-	static int width = 680; //width and height of the game
+	static int width = 680; //height and width of the game
 	static int height = 600;
 	
-	static int rectH = 40;
+	static int rectH = 40; //height and width of a single rectangle of the game board
 	static int rectW = 40;
 	
 	//fields

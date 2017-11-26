@@ -1,26 +1,37 @@
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 
+
+
 public class SnakeMachineLearning {
 
 	static displayInput snakeGame;
 	static Robot input;
 	static NeuralNetwork network;
-	
+	static Neuron temp;
+
+	//test variables
+	static int[] test = new int[4];
 	
 	public static void main(String[] args) throws Exception { //this is the main function that runs the whole program
 		
-		input = new Robot(); //setup
+		//setup
+		input = new Robot(); 
+		network = new NeuralNetwork();
 		
-		Thread.sleep(4000); //4 Second wait time
+		
+		//Thread.sleep(4000); //4 Second wait time
 		
 		//pressRight(); //initial start
 		
 		
+		for(int i =0; i<=3; i++){
+			test[i] = 1;		
+		}
+		
 		while(displayInput.test() == true){ //adds an infinite loop
 			//displayInput.screenCapture();  //returns a picture of the screen
-			
-			
+			network.networking(test);
 		}
 	}
 	
